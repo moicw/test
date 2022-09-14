@@ -1,0 +1,13 @@
+1. No. Each product each transaction. Unable to have multiple product per order. 
+   UNIT PRICE have spacing and does not standardize with others column name.
+
+2. Added transaction line table and link with transaction table. 
+   Added underscore to UNIT PRICE.
+
+3.
+a) ADAM
+   SELECT o.USERID,c.NAME,SUM(t.UNIT_PRICE) FROM TBL_ORDERS o INNER JOIN TBL_CUSTOMERS c ON c.USERID=o.USERID INNER JOIN TBL_TRANSACTIONS t ON t.ORDERID=o.ORDERID GROUP BY o.USERID
+b) Each have 1 hour
+   SELECT HOUR(TRANSACTION_DATE) as hour, COUNT(*) as num_rows FROM `TBL_TRANSACTIONS` GROUP BY HOUR(TRANSACTION_DATE)
+c) APPLE, PEACH, DURIAN
+   SELECT o.USERID,c.NAME,t.ITEM FROM TBL_ORDERS o INNER JOIN TBL_CUSTOMERS c ON c.USERID=o.USERID INNER JOIN TBL_TRANSACTIONS t ON t.ORDERID=o.ORDERID WHERE o.USERID =1
