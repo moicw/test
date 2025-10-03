@@ -1,6 +1,6 @@
 <?php
 $round = 0;
-$lastmemberstatus="";
+$lastmemberstatus = "";
 
 function checkDownload($memberType, $fileType){
 
